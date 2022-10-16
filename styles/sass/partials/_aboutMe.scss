@@ -1,8 +1,10 @@
 @use "../partials/variables" as *;
 
+
 .aboutMe {
   display: flex; 
   width: 100%;
+  margin: 50px 0;
 
   .aboutLeft, .aboutRight{
     display: flex;
@@ -19,4 +21,10 @@
     margin-left: 30px;
   }
 }
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 

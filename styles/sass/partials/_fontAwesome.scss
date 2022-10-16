@@ -1,0 +1,51 @@
+@use "../partials/variables" as *;
+
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.faText, .faTextA {
+  font-size: 1.8rem;
+  display: flex;
+  display: none;
+  animation: fadeIn 2s;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  padding-top: 3px;
+  white-space: pre-line;
+  
+}
+
+
+i {
+  color: $yellow;
+  transition: transform 0.6s ease-in-out;
+  cursor: pointer;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+ 
+  &:hover {
+    color: $white;
+    transform: scale(1.2);
+
+    .faText, .faTextA {
+      display: flex;
+    }
+  
+    .faTextA {
+      padding-top: 13px;
+    }
+  }
+
+  &:focus {
+    color: $white;
+    transform: scale(1.2);
+  }
+} 

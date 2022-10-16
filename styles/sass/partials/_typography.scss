@@ -12,9 +12,6 @@
   font-weight: light;
 }
 
-
-
-
 h1, h2 {
   text-transform: uppercase;
   color: #eee; 
@@ -30,7 +27,7 @@ h1 {
   font-family: $mainAccent;
   font-size: 4rem;
   line-height: 1.5rem;
-  
+  white-space: pre;  
 }
 
 .spanH1A {
@@ -39,29 +36,38 @@ h1 {
 }
 
 .spanH1B {
-  color: #daa520;
+  color: $yellow;
   display: inline-block;     
 }
 
 h2 {
   font-family: $bodyText;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   display: inline-block; 
   text-align: right;
   text-transform: uppercase;
-  color: #eee;
+  color: $white;
+}
+
+.h2inline {
+  display: flex;
+  justify-content: center;
+  font-size: 5.6rem;
+  white-space: pre;
 }
 
 .spanH2 {
   display: flex;
   justify-content: flex-end;
-  color: #daa520;
+  color: $yellow;
   font-family: $mainAccent;
-  font-size: 5rem;
+  font-size: 6rem;
+  white-space: pre;
 }
 
 .mainText {
-  color: #eee;
+  color: $white;
   font-size: 2rem;
   white-space: pre-line;
 }
+
