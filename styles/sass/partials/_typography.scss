@@ -1,0 +1,67 @@
+@use "../partials/variables" as *;
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("/fonts/Poppins/Poppins-SemiBold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("/fonts/Open_Sans/static/OpenSans/OpenSans-Light.ttf");
+  font-weight: light;
+}
+
+
+
+
+h1, h2 {
+  text-transform: uppercase;
+  color: #eee; 
+}
+
+h1 {
+  font-size: 2.8rem;
+  display: inline-block;
+  font-family: $bodyText;
+}
+
+.spanH1A, .spanH1B {
+  font-family: $mainAccent;
+  font-size: 4rem;
+  line-height: 1.5rem;
+  
+}
+
+.spanH1A {
+  display: flex;
+  margin-top: 50px;
+}
+
+.spanH1B {
+  color: #daa520;
+  display: inline-block;     
+}
+
+h2 {
+  font-family: $bodyText;
+  font-size: 3.5rem;
+  display: inline-block; 
+  text-align: right;
+  text-transform: uppercase;
+  color: #eee;
+}
+
+.spanH2 {
+  display: flex;
+  justify-content: flex-end;
+  color: #daa520;
+  font-family: $mainAccent;
+  font-size: 5rem;
+}
+
+.mainText {
+  color: #eee;
+  font-size: 2rem;
+  white-space: pre-line;
+}
