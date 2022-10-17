@@ -9,16 +9,18 @@
 .faText, .faTextA {
   font-size: 1.8rem;
   display: flex;
-  display: none;
   animation: fadeIn 2s;
   cursor: pointer;
   text-align: center;
   justify-content: center;
   padding-top: 3px;
   white-space: pre-line;
-  
 }
 
+
+.faTextA {
+  padding-top: 13px;
+}
 
 i {
   color: $yellow;
@@ -33,15 +35,7 @@ i {
  
   &:hover {
     color: $white;
-    transform: scale(1.2);
-
-    .faText, .faTextA {
-      display: flex;
-    }
-  
-    .faTextA {
-      padding-top: 13px;
-    }
+    transform: scale(1.2);  
   }
 
   &:focus {

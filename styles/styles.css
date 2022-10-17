@@ -281,7 +281,7 @@ h1 {
 
 .spanH1A, .spanH1B {
   font-family: "Poppins-Semibold";
-  font-size: 4rem;
+  font-size: 4.3rem;
   line-height: 1.5rem;
   white-space: pre;
 }
@@ -303,19 +303,8 @@ h2 {
   font-size: 4.5rem;
   display: inline-block;
   text-align: right;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: #eee;
-}
-
-.h2inline {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 5.6rem;
-  white-space: pre;
 }
 
 .spanH2 {
@@ -327,8 +316,9 @@ h2 {
           justify-content: flex-end;
   color: #daa520;
   font-family: "Poppins-Semibold";
-  font-size: 6rem;
+  font-size: 5.2rem;
   white-space: pre;
+  text-transform: uppercase;
 }
 
 .mainText {
@@ -369,8 +359,8 @@ header {
 .mainContainerOne .headshot {
   border-radius: 50%;
   border: 10px solid rgba(218, 213, 213, 0.562);
-  width: 350px;
-  height: 350px;
+  width: 280px;
+  height: 280px;
   margin-right: 30px;
 }
 
@@ -415,15 +405,16 @@ header {
           align-items: center;
 }
 .aboutMe .aboutLeft {
-  width: 35%;
+  width: 40%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-right: 30px;
 }
 .aboutMe .aboutRight {
-  width: 65%;
+  width: 60%;
   margin-left: 30px;
+  border-left: 5px solid #daa520;
+  padding-left: 30px;
 }
 
 .stack {
@@ -434,6 +425,77 @@ header {
       flex-wrap: wrap;
 }
 
+.resumeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 100px;
+}
+
+.resume {
+  color: rgba(0, 0, 0, 0.85);
+  font-family: "Poppins-Semibold";
+  font-size: 2.5rem;
+  background-color: #daa520;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 30px;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+}
+.resume:hover {
+  color: #eee;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-color: grey;
+}
+.resume:focus {
+  color: #eee;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-color: grey;
+}
+
+.resume:active {
+  -webkit-animation: push 0.5s ease-in-out;
+          animation: push 0.5s ease-in-out;
+}
+
+@-webkit-keyframes push {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes push {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -442,7 +504,6 @@ header {
     opacity: 1;
   }
 }
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -456,7 +517,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: none;
   -webkit-animation: fadeIn 2s;
           animation: fadeIn 2s;
   cursor: pointer;
@@ -466,6 +526,10 @@ header {
           justify-content: center;
   padding-top: 3px;
   white-space: pre-line;
+}
+
+.faTextA {
+  padding-top: 13px;
 }
 
 i {
@@ -490,14 +554,6 @@ i:hover {
   color: #eee;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-}
-i:hover .faText, i:hover .faTextA {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-i:hover .faTextA {
-  padding-top: 13px;
 }
 i:focus {
   color: #eee;
