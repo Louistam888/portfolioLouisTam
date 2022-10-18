@@ -41,12 +41,24 @@ h1 {
 }
 
 h2 {
-  font-family: $bodyText;
-  font-size: 4.5rem;
+  display: inline-block;
+  font-size: 4.5rem; 
+  text-transform: capitalize;
+}
+
+h2, .h2Line {
+  font-family: $mainAccent;
   display: inline-block; 
   text-align: right;
-  text-transform: capitalize;
   color: $white;
+}
+
+.h2Line {
+  display: flex; 
+  font-size: 5.2rem;
+  white-space: pre;
+  text-transform: uppercase;
+  justify-content: center;
 }
 
 .spanH2 {
@@ -59,9 +71,50 @@ h2 {
   text-transform: uppercase;
 }
 
+
+.h2White, .spanH2White {
+  text-transform: uppercase;
+  font-size: 5rem;
+  white-space: pre;
+  display: flex;
+  justify-content: center;
+  font-family: $mainAccent;
+}
+
+.h2White {
+  color: $white;
+  margin-bottom: 100px;
+}
+
+.spanH2White {
+  color: $black; 
+}
+
 .mainText {
   color: $white;
   font-size: 2rem;
   white-space: pre-line;
+}
+
+.footerText {
+  color: $white;
+  font-size: 2.5rem;
+  line-height: 1.6rem;
+  text-align: center;
+  white-space: pre-line;
+}
+
+.mainTextBlack {
+  color: $black;
+  font-size: 2.5rem;
+  white-space: pre-line;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: $mainAccent;
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-align: center;
 }
 

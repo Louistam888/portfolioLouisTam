@@ -7,8 +7,30 @@
   <title>Louis Tam - web developer portfolio</title>
   <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 </head>
-<body>
+<body id="top">
   <header>
+    <nav>
+      <div class="wrapper"> <!-- nav wrapper start-->
+        <div class="navContainer">
+        <a href="#top" class="logo">LT</a>
+  <!-- NAV MENU -->
+          <ul class="menu">
+            
+            <li><a href="#about" class="navLink">about</a></li>
+            <li><a href="#projects" class="navLink">projects</a></li>
+            <li><a href="#contact" class="navLink">contact</a></li>
+          </ul>
+  <!-- HAMBURGER MENU -->
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </div> <!-- nav wrapper end-->
+    </nav>
+
+
     <div class="wrapper">
       <div class="headerContainer">
         <div class="mainContainerOne">
@@ -25,7 +47,7 @@
     </div><!--wrapper div end-->
   </header>
   <main>
-    <section class="about">
+    <section class="about" id="about">
       <div class="wrapper">
         <div class="aboutMe">
           <div class="aboutLeft">
@@ -98,20 +120,121 @@
       </div><!--wrapper div end-->
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
       <div class="wrapper">
+        <h2 class="h2White">Featured <span class="spanH2White">projects</span>
+        </h2>
+
+        <div class="projectContainer">
+          <div class="projectLeft">
+            <h3>Unwanted Roomates</h3>
+            <p class="mainTextBlack">App which allows tenants in New York City to search for the municipal rat inspection history of an apartment before signing a lease. Powered by New York City's open data API portal.
+
+            Made with: HTML5, CSS3, JavaScript, REST APIs
+            </p>
+            <div class="linksContainer">
+              <a href="#" class="codeLink">Live site</a>
+              <a href="#" class="codeLink">Source code</a>
+            </div><!--linksContainer div end -->
+          </div><!--projectLeft div end-->
+          <div class="projectRight">
+            <a href="#">
+              <img src="./assets/unwantedroomates.jpg" alt="Unwanted Roomates app">
+            </a>
+          </div><!--projectRight div end-->
+        </div><!--projectContainer div end-->
+
+        <div class="projectContainer">
+          <div class="projectLeft">
+            <a href="https://oilchangev2.netlify.app/">
+              <img src="./assets/oilchange.jpg" alt="Do I need an oil change? app">
+            </a>
+          </div>
+          <div class="projectRight">
+            <h3>Do I need an oil change?</h3>
+            <p class="mainTextBlack">Since the pandemic began, many of us have been driving less and are less attuned to the maintenance schedules of our cars. For those who do their own oil changes (and therefore don't get those reminder stickers on their windshields), this app automatically calculates when the next oil change is likely due. 
+
+            Made with: HTML5, CSS3, JavaScript
+            </p>
+            <div class="linksContainer">
+              <a href="https://oilchangev2.netlify.app/" class="codeLink">Live site</a>
+              <a href="https://github.com/Louistam888/oilChange2.1" class="codeLink">Source code</a>
+            </div><!--linksContainer div end -->
+          </div><!--projectRight div end-->
+        </div><!--projectContainer div end-->
 
 
+        <div class="projectContainer">
+          <div class="projectLeft">
+            <h3>Royal Canadian Chair Force</h3>
+            <p class="mainTextBlack">
+              Multi-page website for a fictional furniture store built and designed completely from scratch. 
 
-      </div>
+            Made with: HTML5, CSS3, JavaScript
+              
+              
+            </p>
+            <div class="linksContainer">
+              <a href="https://ornate-starship-f52919.netlify.app/" class="codeLink">Live site</a>
+              <a href="https://github.com/Louistam888/royalCanadianChairForce2.0" class="codeLink">Source code</a>
+            </div><!--linksContainer div end -->
+          </div><!--projectLeft div end-->
+          <div class="projectRight">
+            <a href="https://silver-sopapillas-881eaf.netlify.app/" class="codeLink">
+              <img src="./assets/RCAF.jpg" alt="Unwanted Roomates app">
+            </a>
+          </div><!--projectRight div end-->
+        </div><!--projectContainer div end-->
+
+        <div class="projectContainer">
+          <div class="projectLeft">
+            <a href="https://ornate-starship-f52919.netlify.app/" class="codeLink">
+              <img src="./assets/beachStays.jpg" alt="Royal Canadian Chair Force">
+            </a>
+          </div>
+          <div class="projectRight">
+            <h3>BeachStays</h3>
+            <p class="mainTextBlack">
+              Multi-page PSD conversion project for a fictional tropical resort. 
+
+              Made with: HTML5, CSS3, JavaScript
+            </p>
+            <div class="linksContainer">
+              <a href="https://ornate-starship-f52919.netlify.app/" class="codeLink">Live site</a>
+              <a href="https://github.com/Louistam888/louisTamProjectOne" class="codeLink">Source code</a>
+            </div><!--linksContainer div end -->
+          </div><!--projectRight div end-->
+        </div><!--projectContainer div end-->
+      </div><!--wrapper div end--> 
     </section>
-  
     
- 
     
   </main>
-
   <!--JAVASCRIPT-->
   <script src="https://kit.fontawesome.com/2d0137e58f.js" crossorigin="anonymous"></script>
+  <script src="./javascript/hamburger.js"></script>
 </body>
+<footer id="contact">
+  <div class="wrapper">
+    <h2 class="h2Line">Let's <span class="spanH2">connect!</span></h2>
+    <div class="footerContainer">
+      <p class="footerText">
+        If you have any questions about any of my projects and skills, please don't hesitate to reach out! I love meeting other professionals in tech. 
+        
+        You can reach me directly by email at <a href="mailto:louistam888@gmail.com" class="email">louistam888@gmail.com</a>.
+      </p>
+      <div class="socialMediaContainer">
+        <div class="socialBox">
+          <i class="far fa-envelope fa-7x" aria-hidden="true"><p class="social">Email</p></i>
+          <i class="fab fa-linkedin fa-7x" aria-hidden="true"><p class="social">LinkedIn</p></i>
+          <i class="fab fa-github fa-7x" aria-hidden="true"><p class="social">GitHub</p></i>
+          <i class="fas fa-calendar-check fa-7x" aria-hidden="true"><p class="social">Calendly</p></i>
+        </div>
+      </div>
+
+    </div><!--footerContainer div end--> 
+  </div><!--wrapper div end-->
+
+  
+</footer>
 </html>
