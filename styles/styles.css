@@ -277,13 +277,15 @@ h1 {
   font-size: 2.8rem;
   display: inline-block;
   font-family: "OpenSans-Light";
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
 }
 
 .spanH1A, .spanH1B {
   font-family: "Poppins-Semibold";
   font-size: 4.3rem;
   line-height: 1.5rem;
-  white-space: pre;
 }
 
 .spanH1A {
@@ -291,13 +293,97 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   margin-top: 50px;
+  width: 100%;
 }
 
 .spanH1B {
   color: #daa520;
   display: inline-block;
+  white-space: pre;
+  position: absolute;
+  left: 115px;
+  bottom: 0;
+  opacity: 0;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+.spanH1B:nth-of-type(1) {
+  -webkit-animation: rotate 1.5s 0.75s;
+          animation: rotate 1.5s 0.75s;
+}
+.spanH1B:nth-of-type(2) {
+  -webkit-animation: rotate 1.5s 2s;
+          animation: rotate 1.5s 2s;
+}
+.spanH1B:nth-of-type(3) {
+  -webkit-animation: rotate 1.5s 3.25s;
+          animation: rotate 1.5s 3.25s;
+}
+.spanH1B:nth-of-type(4) {
+  -webkit-animation: fade-text 1.5s 4.5s forwards;
+          animation: fade-text 1.5s 4.5s forwards;
 }
 
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: translate3d(0, -80px, 0);
+            transform: translate3d(0, -80px, 0);
+    opacity: 0;
+  }
+  20%, 80% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 40px, 0);
+            transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: translate3d(0, -80px, 0);
+            transform: translate3d(0, -80px, 0);
+    opacity: 0;
+  }
+  20%, 80% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 40px, 0);
+            transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fade-text {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -80px, 0);
+            transform: translate3d(0, -80px, 0);
+  }
+  50%, 100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fade-text {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -80px, 0);
+            transform: translate3d(0, -80px, 0);
+  }
+  50%, 100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
 h2 {
   display: inline-block;
   font-size: 4.5rem;
@@ -453,6 +539,13 @@ i:focus {
           transform: scale(1.2);
 }
 
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .navContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -464,7 +557,7 @@ i:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90px;
+  height: 130px;
 }
 
 .logo {
@@ -506,7 +599,14 @@ i:focus {
   padding: 5px 50px;
   text-transform: uppercase;
 }
-.menu li a {
+.menu li:nth-of-type(3) {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 50px;
+  padding-right: 0;
+}
+
+.navLink {
   font-family: "Poppins-Semibold";
   font-weight: bold;
   font-size: 2.5rem;
@@ -517,14 +617,36 @@ i:focus {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   padding: 5px 0;
+  position: relative;
 }
-.menu li a:hover {
+.navLink:hover {
   color: #eee;
-  border-bottom: 2px solid #eee;
 }
-.menu li a:focus {
+.navLink:focus {
   color: #eee;
-  border-bottom: 2px solid #eee;
+}
+
+.navLink:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: #eee;
+  -webkit-transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  width: 0;
+}
+
+.navLink:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.navLink:focus:after {
+  width: 100%;
+  left: 0;
 }
 
 .hamburger {
@@ -549,6 +671,7 @@ header {
   background-position: center 95%;
   height: 100vh;
   width: 100%;
+  position: relative;
 }
 
 .headerContainer {
@@ -847,6 +970,9 @@ header {
     width: 100%;
     z-index: 20;
   }
+  .navContainer {
+    height: 90px;
+  }
   .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -878,6 +1004,10 @@ header {
     right: 0;
   }
   .menu li {
+    padding: 30px;
+    list-style-type: none;
+  }
+  .menu li:nth-of-type(3) {
     padding: 30px;
   }
   .menu li a {

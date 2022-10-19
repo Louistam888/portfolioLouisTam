@@ -1,11 +1,19 @@
 @use "../partials/variables" as *;
 
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .navContainer {
   display: flex; 
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  height: 90px;
+  height: 130px;  
+
 }
  
 .logo {
@@ -28,7 +36,6 @@
     &:focus {
       color: $white;
     }
-
 }
 
 
@@ -40,28 +47,57 @@
   padding: 5px 50px;
   text-transform: uppercase;
 
-  a {
-    font-family: $mainAccent;
-    font-weight: bold;
-    font-size: 2.5rem;
-    letter-spacing: 0.1rem;
-    line-height: 2.9rem;
-    text-decoration: none;
-    color: $yellow;
-    transition: all 0.3s ease-in-out;
-    padding: 5px 0;
-    
-      &:hover {
-        color: $white;
-        border-bottom: 2px solid $white;
-      }
-      &:focus {
-        color: $white;
-        border-bottom: 2px solid $white;
-      }
+  &:nth-of-type(3) {
+    padding-top: 5px; 
+    padding-bottom: 5px;
+    padding-left: 50px; 
+    padding-right: 0;
     }
   }
 }
+
+.navLink {
+  font-family: $mainAccent;
+  font-weight: bold;
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  line-height: 2.9rem;
+  text-decoration: none;
+  color: $yellow;
+  transition: all 0.3s ease-in-out;
+  padding: 5px 0;
+  position: relative;
+  
+    &:hover {
+      color: $white;
+    }
+    &:focus {
+      color: $white;
+    }
+  }
+
+  .navLink:after {    
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: $white;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+  }
+  .navLink:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  .navLink:focus:after { 
+    width: 100%; 
+    left: 0; 
+
+    //underline effect made by following tutorial by justin: https://codepen.io/jstn/details/mdoOZJ
+  }
+
 
 .hamburger {
   display: none;
