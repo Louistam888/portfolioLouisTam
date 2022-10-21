@@ -5,7 +5,14 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  animation: navFade 2s ease-in;
 }
+
+@keyframes navFade {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 
 .navContainer {
   display: flex; 

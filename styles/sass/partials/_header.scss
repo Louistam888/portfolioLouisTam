@@ -1,7 +1,7 @@
 @use "../partials/variables" as *;
 
 header {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.9) 60%, rgba(0, 0, 0, 0.95) 100%), url("/assets/DSC_0777.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.85) 60%, rgba(0, 0, 0, 0.85) 100%), url("/assets/JacksonPoint.jpeg");
   background-size: cover;
   background-position: center 95%;
   height: 100vh;
@@ -37,14 +37,93 @@ header {
   justify-content: center;
   flex-direction: column;
   width: 65%;
-
-  .chat {
-    font-size: 3rem;
-    color: $white;
-    text-transform: uppercase;
-    font-family: $mainAccent;
-    margin-top: 20px;
-  }
 }
 
+.arrowContainer {
+	position: absolute;
+	width: 100%;
+  height: 25%;
+  bottom: 0; 
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
 
+.arrowText {
+	display: block;
+	margin-top: 75px;
+	font-family: $bodyText;
+	font-size: 1.5rem;
+	color: $yellow;
+	text-transform: uppercase;
+	white-space: nowrap;
+	opacity: .25;
+	animation: pulse 2s linear alternate infinite;
+}
+
+.arrow {
+	position: absolute;
+	width: 28px;
+	height: 8px;
+	opacity: 0;
+	transform: scale3d(0.5, 0.5, 0.5);
+	animation: move 3s ease-out infinite;
+}
+
+.arrow:first-child {
+	animation: move 3s ease-out 1s infinite;
+}
+
+.arrow:nth-child(2) {
+	animation: move 3s ease-out 2s infinite;
+}
+
+.arrow:before,
+.arrow:after {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	background: $yellow;
+	height: 100%;
+	width: 51%;
+}
+
+.arrow:before {
+	left: 0;
+	transform: skew(0deg, 30deg);
+}
+
+.arrow:after {
+	right: 0;
+	width: 50%;
+	transform: skew(0deg, -30deg);
+}
+
+@keyframes pulse {
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes move {
+	25% {
+		opacity: 1;
+	}
+
+	33% {
+		opacity: 1;
+		transform: translateY(30px);
+	}
+
+	67% {
+		opacity: 1;
+		transform: translateY(40px);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+	}
+}
+
+//animated arrow based on codepen by Igor https://codepen.io/kasigor555/pen/LYxrqRo

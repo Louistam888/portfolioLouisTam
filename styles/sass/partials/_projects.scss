@@ -7,7 +7,7 @@
 .projectContainer {
   display: flex; 
   width: 100%;
-  margin: 50px 0; 
+  margin: 150px 0; 
 }
 
 .projectLeft, .projectRight {
@@ -15,20 +15,51 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  opacity: 0; 
+  transition: 1.5s ease-in;
+	transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
+
+  img {
+    border: 1px solid $black;
+  }
+}
+
+.projectLeft.active, .projectRight.active {
+	opacity: 1;
+	scale: 1;
 }
 
 .projectLeft {
-  margin-right: 20px;
+  padding-right: 30px;
+  text-align: right;
+
+  h3 {
+    text-align: right;
+  }
+
+  .linksContainer {
+    justify-content: flex-end;
+  }
 }
 
 .projectRight {
-  margin-left: 20px;
+  padding-left: 30px;
+  text-align: left;
+
+  h3 {
+    text-align: left;
+  }
+
+  .linksContainer {
+    justify-content: flex-start;
+  }
+  
 }
 
 .linksContainer {
   display: flex;
   width: 100%;
-  justify-content: center;
+
 
   .codeLink {
     text-decoration: none; 
@@ -57,4 +88,15 @@
   .codeLink:active {
     animation: push 0.5s ease-in-out;
   }
+}
+
+#revealPoint {
+	position: fixed;
+	height: 20px;
+	width: 100%;
+	left: 0;
+	bottom: 450px;
+	color: transparent;
+	padding: 7px;
+	margin: 0;
 }

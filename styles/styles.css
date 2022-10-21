@@ -384,6 +384,14 @@ h1 {
             transform: translate3d(0, 0, 0);
   }
 }
+.chat {
+  font-size: 3rem;
+  color: #daa520;
+  text-transform: uppercase;
+  font-family: "Poppins-Semibold";
+  margin-top: 20px;
+}
+
 h2 {
   display: inline-block;
   font-size: 4.5rem;
@@ -544,8 +552,27 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  -webkit-animation: navFade 2s ease-in;
+          animation: navFade 2s ease-in;
 }
 
+@-webkit-keyframes navFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes navFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .navContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -665,8 +692,8 @@ nav {
 }
 
 header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), color-stop(30%, rgba(0, 0, 0, 0.6)), color-stop(60%, rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.95))), url("/assets/DSC_0777.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.9) 60%, rgba(0, 0, 0, 0.95) 100%), url("/assets/DSC_0777.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), color-stop(30%, rgba(0, 0, 0, 0.6)), color-stop(60%, rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.85))), url("/assets/JacksonPoint.jpeg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.85) 60%, rgba(0, 0, 0, 0.85) 100%), url("/assets/JacksonPoint.jpeg");
   background-size: cover;
   background-position: center 95%;
   height: 100vh;
@@ -719,14 +746,129 @@ header {
           flex-direction: column;
   width: 65%;
 }
-.mainContainerTwo .chat {
-  font-size: 3rem;
-  color: #eee;
-  text-transform: uppercase;
-  font-family: "Poppins-Semibold";
-  margin-top: 20px;
+
+.arrowContainer {
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
+.arrowText {
+  display: block;
+  margin-top: 75px;
+  font-family: "OpenSans-Light";
+  font-size: 1.5rem;
+  color: #daa520;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.25;
+  -webkit-animation: pulse 2s linear alternate infinite;
+          animation: pulse 2s linear alternate infinite;
+}
+
+.arrow {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  -webkit-transform: scale3d(0.5, 0.5, 0.5);
+          transform: scale3d(0.5, 0.5, 0.5);
+  -webkit-animation: move 3s ease-out infinite;
+          animation: move 3s ease-out infinite;
+}
+
+.arrow:first-child {
+  -webkit-animation: move 3s ease-out 1s infinite;
+          animation: move 3s ease-out 1s infinite;
+}
+
+.arrow:nth-child(2) {
+  -webkit-animation: move 3s ease-out 2s infinite;
+          animation: move 3s ease-out 2s infinite;
+}
+
+.arrow:before,
+.arrow:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  background: #daa520;
+  height: 100%;
+  width: 51%;
+}
+
+.arrow:before {
+  left: 0;
+  -webkit-transform: skew(0deg, 30deg);
+          transform: skew(0deg, 30deg);
+}
+
+.arrow:after {
+  right: 0;
+  width: 50%;
+  -webkit-transform: skew(0deg, -30deg);
+          transform: skew(0deg, -30deg);
+}
+
+@-webkit-keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+            transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+@keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+            transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
 .aboutMe {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -843,7 +985,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin: 50px 0;
+  margin: 150px 0;
 }
 
 .projectLeft, .projectRight {
@@ -858,14 +1000,45 @@ header {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  opacity: 0;
+  -webkit-transition: 1.5s ease-in;
+  transition: 1.5s ease-in;
+  -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
+          transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
+}
+.projectLeft img, .projectRight img {
+  border: 1px solid rgba(0, 0, 0, 0.85);
+}
+
+.projectLeft.active, .projectRight.active {
+  opacity: 1;
+  scale: 1;
 }
 
 .projectLeft {
-  margin-right: 20px;
+  padding-right: 30px;
+  text-align: right;
+}
+.projectLeft h3 {
+  text-align: right;
+}
+.projectLeft .linksContainer {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .projectRight {
-  margin-left: 20px;
+  padding-left: 30px;
+  text-align: left;
+}
+.projectRight h3 {
+  text-align: left;
+}
+.projectRight .linksContainer {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .linksContainer {
@@ -873,9 +1046,6 @@ header {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 .linksContainer .codeLink {
   text-decoration: none;
@@ -906,6 +1076,17 @@ header {
 .linksContainer .codeLink:active {
   -webkit-animation: push 0.5s ease-in-out;
           animation: push 0.5s ease-in-out;
+}
+
+#revealPoint {
+  position: fixed;
+  height: 20px;
+  width: 100%;
+  left: 0;
+  bottom: 450px;
+  color: transparent;
+  padding: 7px;
+  margin: 0;
 }
 
 .footerContainer {
