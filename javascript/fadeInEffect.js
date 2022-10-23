@@ -1,5 +1,5 @@
 function scrollReveal() {
-	const revealPoint = 150;
+	const revealPoint = 10;
 	const revealElement = document.querySelectorAll(".projectLeft, .projectRight");
 	for (let i = 0; i < revealElement.length; i++) {
 		const windowHeight = window.innerHeight;

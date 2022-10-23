@@ -258,6 +258,17 @@ section, footer {
   border-top: 5px solid #daa520;
 }
 
+#revealPoint {
+  position: fixed;
+  height: 20px;
+  width: 100%;
+  left: 0;
+  bottom: 450px;
+  color: transparent;
+  padding: 7px;
+  margin: 0;
+}
+
 @font-face {
   font-family: "Poppins-SemiBold";
   src: url("/fonts/Poppins/Poppins-SemiBold.ttf");
@@ -275,24 +286,37 @@ h1, h2 {
 
 h1 {
   font-size: 2.8rem;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "OpenSans-Light";
   padding: 10px 0;
   width: 100%;
   position: relative;
+  margin-left: -2px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .spanH1A, .spanH1B {
   font-family: "Poppins-Semibold";
-  font-size: 4.3rem;
-  line-height: 1.5rem;
+  font-size: 7rem;
+  line-height: 2.5rem;
 }
 
 .spanH1A {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 50px;
+  margin-top: 55px;
   width: 100%;
 }
 
@@ -301,7 +325,7 @@ h1 {
   display: inline-block;
   white-space: pre;
   position: absolute;
-  left: 115px;
+  left: 180px;
   bottom: 0;
   opacity: 0;
   text-align: center;
@@ -387,9 +411,8 @@ h1 {
 .chat {
   font-size: 3rem;
   color: #daa520;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-family: "Poppins-Semibold";
-  margin-top: 20px;
 }
 
 h2 {
@@ -462,9 +485,9 @@ h2, .h2Line {
 .footerText {
   color: #eee;
   font-size: 2.5rem;
-  line-height: 1.6rem;
+  line-height: 2.8rem;
   text-align: center;
-  white-space: pre-line;
+  margin-bottom: 30px;
 }
 
 .mainTextBlack {
@@ -510,7 +533,7 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 3px;
+  padding-top: 5px;
   white-space: pre-line;
 }
 
@@ -525,7 +548,7 @@ i {
   transition: transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
   cursor: pointer;
-  margin: 15px;
+  margin: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -534,7 +557,10 @@ i {
           justify-content: center;
   text-align: center;
   width: 100px;
-  height: 100px;
+  height: 120px;
+  font-size: 8rem;
+  -ms-flex-item-align: end;
+      align-self: end;
 }
 i:hover {
   color: #eee;
@@ -707,44 +733,16 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.mainContainerOne {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 35%;
-}
-.mainContainerOne .headshot {
-  border-radius: 50%;
-  border: 10px solid rgba(218, 213, 213, 0.562);
-  width: 280px;
-  height: 280px;
-  margin-right: 30px;
-}
-
-.mainContainerTwo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: left;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 65%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .arrowContainer {
@@ -759,6 +757,12 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.arrowContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .arrowText {
@@ -923,7 +927,6 @@ header {
   background-color: #daa520;
   text-decoration: none;
   padding: 15px;
-  border-radius: 30px;
   -webkit-transition: -webkit-transform 0.6s ease-in-out;
   transition: -webkit-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
@@ -931,14 +934,14 @@ header {
 }
 .resume:hover {
   color: #eee;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background-color: grey;
 }
 .resume:focus {
   color: #eee;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background-color: grey;
 }
 
@@ -980,12 +983,12 @@ header {
   background-color: #daa520;
 }
 
-.projectContainer {
+.projectContainerA, .projectContainerB {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin: 150px 0;
+  margin: 120px 0;
 }
 
 .projectLeft, .projectRight {
@@ -1027,6 +1030,12 @@ header {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+.projectLeft .codeLink {
+  margin-right: 0;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 .projectRight {
   padding-left: 30px;
@@ -1039,6 +1048,12 @@ header {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+.projectRight .codeLink {
+  margin-left: 0;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .linksContainer {
@@ -1054,8 +1069,6 @@ header {
   font-size: 3rem;
   text-transform: uppercase;
   padding: 10px;
-  margin: 10px;
-  border-radius: 20px;
   -webkit-transition: -webkit-transform 0.6s ease-in-out;
   transition: -webkit-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
@@ -1078,17 +1091,6 @@ header {
           animation: push 0.5s ease-in-out;
 }
 
-#revealPoint {
-  position: fixed;
-  height: 20px;
-  width: 100%;
-  left: 0;
-  bottom: 450px;
-  color: transparent;
-  padding: 7px;
-  margin: 0;
-}
-
 .footerContainer {
   width: 100%;
   display: -webkit-box;
@@ -1101,7 +1103,18 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 20px;
+}
+
+.headshot {
+  border-radius: 50%;
+  border: 10px solid rgba(218, 213, 213, 0.562);
+  width: 250px;
+  height: 250px;
+  margin-bottom: 30px;
 }
 
 .socialMediaContainer {
@@ -1143,6 +1156,35 @@ header {
   color: #eee;
 }
 
+@media (max-width: 1560px) {
+  .spanH1A, .spanH1B {
+    font-size: 5rem;
+  }
+  .spanH1B {
+    left: 130px;
+  }
+}
+@media (max-width: 1200px) {
+  .spanH1A, .spanH1B {
+    font-size: 4.3rem;
+  }
+  .spanH1B {
+    left: 115px;
+  }
+  .mainTextBlack, .mainText, .footerText, .linksContainer > .codeLink {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  .projectContainer {
+    margin: 80px 0;
+  }
+  .h2White {
+    color: #eee;
+    margin-bottom: 80px;
+  }
+}
 @media (max-width: 1000px) {
   nav {
     background-color: #daa520;
@@ -1150,6 +1192,11 @@ header {
     position: fixed;
     width: 100%;
     z-index: 20;
+  }
+  header {
+    top: 90px;
+    height: calc(100vh - 90px);
+    background-position: 80% center;
   }
   .navContainer {
     height: 90px;
@@ -1215,5 +1262,207 @@ header {
             transform: translateY(-8px) rotate(-45deg);
     -webkit-transition: 0.3s;
     transition: 0.3s;
+  }
+  .headerContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: calc(100vh - 90px);
+  }
+  .spanH1A, .spanH1B {
+    font-family: "Poppins-Semibold";
+    font-size: 5rem;
+    line-height: 1.5rem;
+  }
+  .spanH1B {
+    left: 130px;
+  }
+  .chat {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .arrowContainer {
+    display: none;
+  }
+  .aboutMe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aboutMe .aboutLeft, .aboutMe .aboutRight {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .aboutMe .stack {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  .spanH2 {
+    display: inline;
+    font-size: 4.2rem;
+  }
+  .h2Line {
+    font-size: 4.2rem;
+  }
+  .resume:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .resume:focus {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .projectContainerA, .projectContainerB {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 50px auto;
+  }
+  .projectContainerA div:nth-child(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .projectLeft, .projectRight {
+    width: 100%;
+    padding: 0;
+    opacity: 1;
+  }
+  .projectLeft .codeLink, .projectRight .codeLink {
+    margin: 10px;
+    margin-bottom: 0;
+  }
+  h3, .linksContainer, .mainTextBlack {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  h3 {
+    margin-top: 20px;
+  }
+  .linksContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .codeLink {
+    width: 100%;
+  }
+  .codeLink:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .codeLink:focus {
+    -webkit-transform: none;
+            transform: none;
+  }
+  #revealPoint {
+    position: fixed;
+    height: 20px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 7px;
+    margin: 0;
+  }
+}
+@media (max-width: 750px) {
+  section, footer {
+    padding: 50px 0;
+  }
+  .spanH1A, .spanH1B {
+    font-size: 4rem;
+  }
+  h2, .spanH2, .h2Line, .h2White, .spanH2White {
+    font-size: 3.8rem;
+  }
+  .h2White {
+    margin-bottom: 0px;
+  }
+  .stack i {
+    font-size: 5rem;
+    margin: 10px;
+    height: 80px;
+  }
+  .faText {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 3.5rem;
+  }
+  footer i {
+    font-size: 5rem;
+    margin: 0px;
+  }
+  .resumeContainer {
+    margin-top: 60px;
+  }
+  .resume {
+    font-size: 2rem;
+  }
+  .footerText {
+    line-height: 2rem;
+    white-space: normal;
+  }
+}
+@media (max-width: 575px) {
+  h2, .spanH2, .h2Line, .h2White, .spanH2White {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  .mainText, .mainTextBlack, .footerText {
+    font-size: 1.8rem;
+  }
+  .resumeContainer {
+    margin-top: 30px;
+  }
+  .socialMediaContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 455px) {
+  .h2Line, .h2White, .spanH2White, h3 {
+    font-size: 2.5rem;
+  }
+  h2, .spanH2 {
+    font-size: 2.1rem;
+  }
+  footer .spanH2 {
+    font-size: 2.5rem;
+  }
+  .socialBox {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .mainText, .mainTextBlack, .footerText {
+    font-size: 1.6rem;
   }
 }
