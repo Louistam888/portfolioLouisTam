@@ -3,7 +3,7 @@
 
 
 @media (max-width: 1560px) {
-  .spanH1A, .spanH1B {
+  .h1A, .spanH1B {
     font-size: 5rem;
   }
 
@@ -14,7 +14,7 @@
 
 
 @media (max-width: 1200px) {
-  .spanH1A, .spanH1B {
+  .h1A, .spanH1B {
     font-size: 4.3rem;
   }
 
@@ -140,19 +140,14 @@
     height: calc(100vh - 90px);
   }
 
-  .spanH1A, .spanH1B {
+  .h1A, .spanH1B {
     font-family: $mainAccent;
-    font-size: 5rem;
+    font-size: 4.6rem;
     line-height: 1.5rem;
   }  
 
   .spanH1B {
-    left: 130px;
-  }
-
-  .chat {
-    margin-top: 20px;
-    width: 100%;
+    padding-left: 15px;
   }
 
   .arrowContainer {
@@ -269,16 +264,50 @@
 }
 
 
-
 @media (max-width: 750px) {
+
+  .spanH1B {
+    padding-left: 10px;
+    justify-content: center;
+  }
+  
+  .rotatingContainer {
+    flex-direction: column;
+    // border: 2px solid blue;
+    height: 4.8rem;
+    align-items: center;
+    overflow: hidden;
+  }
 
   section, footer {
     padding: 50px 0;
   }
 
-  .spanH1A,.spanH1B {
-    font-size: 4rem;
+  .h1A,.spanH1B {
+    font-size: 4.3rem;
   }  
+
+  .h1A {
+    display: none;
+  }
+
+  .h1B {
+    display: flex; 
+    text-transform: uppercase; 
+    font-size: 2.5rem;
+    color: $white
+  }
+
+ 
+
+  .rotatingContainer {
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+
+  .chat {
+    font-size: 2.5rem;
+  }
 
   h2, .spanH2, .h2Line, .h2White, .spanH2White {
     font-size: 3.8rem;
@@ -322,7 +351,21 @@
   }
 }
 
+
 @media (max-width: 575px) {
+
+
+  h1,.chat {
+    font-size: 2.3rem;
+  }
+  .h1B {
+    font-size: 2rem;
+    text-transform: none;
+  }  
+
+  .spanH1B {
+    font-size: 3.4rem;
+  }
 
   h2, .spanH2, .h2Line, .h2White, .spanH2White {
     font-size: 3rem;
@@ -347,6 +390,22 @@
 }
 
 @media (max-width: 455px) {
+
+  h1, .chat {
+    font-size: 1.8rem;
+  }
+
+  .h1B {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+  }
+  .spanH1B {
+    font-size: 2.38rem;
+  }
+
+  .rotatingContainer {
+    margin-top: 0;
+  }
 
   .loaderText {
     color: $white;
