@@ -11,6 +11,6 @@ const scrollReveal = () => {
 		}
 	}
 }
-window.addEventListener("scroll", setTimeout(scrollReveal, 3000));
+window.addEventListener("scroll", scrollReveal);
 
 //based on scroll reveal by Miko https://codepen.io/mikomagni/pen/vYNbrYN
