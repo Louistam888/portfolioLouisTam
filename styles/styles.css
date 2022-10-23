@@ -333,20 +333,20 @@ h1 {
   padding: 10px 0;
 }
 .spanH1B:nth-of-type(1) {
-  -webkit-animation: rotate 1.5s 0.75s;
-          animation: rotate 1.5s 0.75s;
+  -webkit-animation: rotate 1.5s 3.75s;
+          animation: rotate 1.5s 3.75s;
 }
 .spanH1B:nth-of-type(2) {
-  -webkit-animation: rotate 1.5s 2s;
-          animation: rotate 1.5s 2s;
+  -webkit-animation: rotate 1.5s 5s;
+          animation: rotate 1.5s 5s;
 }
 .spanH1B:nth-of-type(3) {
-  -webkit-animation: rotate 1.5s 3.25s;
-          animation: rotate 1.5s 3.25s;
+  -webkit-animation: rotate 1.5s 6.25s;
+          animation: rotate 1.5s 6.25s;
 }
 .spanH1B:nth-of-type(4) {
-  -webkit-animation: fade-text 1.5s 4.5s forwards;
-          animation: fade-text 1.5s 4.5s forwards;
+  -webkit-animation: fade-text 1.5s 8.5s forwards;
+          animation: fade-text 1.5s 8.5s forwards;
 }
 
 @-webkit-keyframes rotate {
