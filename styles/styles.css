@@ -504,6 +504,21 @@ h3 {
   text-align: center;
 }
 
+.loaderText, .loaderText2 {
+  font-family: "Poppins-Semibold";
+  text-transform: uppercase;
+}
+
+.loaderText {
+  color: #eee;
+  font-size: 5rem;
+}
+
+.loaderText2 {
+  color: #daa520;
+  font-size: 3rem;
+}
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -571,6 +586,86 @@ i:focus {
   color: #eee;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgb(0, 0, 0);
+  z-index: 1000;
+  -webkit-transition: opacity 0.75s, visibility 0.75s;
+  transition: opacity 0.75s, visibility 0.75s;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  flex-direction: column-reverse;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #eee;
+  border-top-color: #daa520;
+  border-radius: 50%;
+  -webkit-animation: loading 0.75s ease infinite;
+          animation: loading 0.75s ease infinite;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  from {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes loading {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  from {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loaderTextContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 nav {
@@ -1147,13 +1242,13 @@ header {
 }
 
 .email {
-  color: rgb(135, 135, 182);
+  color: #eee;
 }
 .email:hover {
-  color: #eee;
+  color: #daa520;
 }
 .email:focus {
-  color: #eee;
+  color: #daa520;
 }
 
 @media (max-width: 1560px) {
@@ -1449,6 +1544,14 @@ header {
   }
 }
 @media (max-width: 455px) {
+  .loaderText {
+    color: #eee;
+    font-size: 3rem;
+  }
+  .loaderText2 {
+    color: #daa520;
+    font-size: 2rem;
+  }
   .h2Line, .h2White, .spanH2White, h3 {
     font-size: 2.5rem;
   }

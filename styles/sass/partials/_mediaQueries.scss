@@ -43,6 +43,16 @@
 
 @media (max-width: 1000px) {
 
+  // .loaderText {
+  //   color: $white;
+  //   font-size: 4rem;
+  // }
+  
+  // .loaderText2 {
+  //   color: $yellow;
+  //   font-size: 2.5rem;
+  // }
+
   nav {
     background-color: $yellow;
     opacity: 0.95;
@@ -330,6 +340,16 @@
 }
 
 @media (max-width: 455px) {
+
+  .loaderText {
+    color: $white;
+    font-size: 3rem;
+  }
+  
+  .loaderText2 {
+    color: $yellow;
+    font-size: 2rem;
+  }
   .h2Line, .h2White, .spanH2White, h3{
     font-size: 2.5rem;
   }

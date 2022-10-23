@@ -40,12 +40,12 @@
 }
 
 .email {
-  color: rgb(135, 135, 182);
+  color: $white;
 
   &:hover {
-    color: $white;
+    color: $yellow;
   }
   &:focus {
-    color: $white;
+    color: $yellow;
   }
 }

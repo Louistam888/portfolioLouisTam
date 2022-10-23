@@ -187,4 +187,21 @@ h3 {
   text-align: center;
 }
 
+.loaderText, .loaderText2{
+  font-family: $mainAccent;
+  text-transform: uppercase;
+}
+
+.loaderText {
+  color: $white;
+  font-size: 5rem;
+}
+
+.loaderText2 {
+  color: $yellow;
+  font-size: 3rem;
+}
+
+
+
 //rotating text animation created using tutorial by Keenan Payne https://codepen.io/keenanpayne/pen/mxjGmo

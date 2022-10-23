@@ -1,0 +1,49 @@
+@use "../partials/variables" as *;
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background-color: rgba(0, 0, 0);
+  z-index: 1000;
+  transition: opacity 0.75s, visibility 0.75s; 
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+}
+
+.loader::after {
+  content: "";
+  width: 75px; 
+  height: 75px;
+  border: 15px solid $white; 
+  border-top-color: $yellow;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {transform: rotate(0turn)}
+  from {transform: rotate(1turn)}
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden; 
+}
+
+.loaderTextContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px; 
+  flex-direction: column;
+}
+
+//preloader created using tutorial by dcode https://www.youtube.com/watch?v=-HS9IIuT_Mo
