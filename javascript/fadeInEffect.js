@@ -1,4 +1,4 @@
-function scrollReveal() {
+const scrollReveal = () => {
 	const revealPoint = 10;
 	const revealElement = document.querySelectorAll(".projectLeft, .projectRight");
 	for (let i = 0; i < revealElement.length; i++) {
@@ -11,8 +11,6 @@ function scrollReveal() {
 		}
 	}
 }
-
-window.addEventListener("scroll", scrollReveal);
-
+window.addEventListener("scroll", setTimeout(scrollReveal, 2000);
 
 //based on scroll reveal by Miko https://codepen.io/mikomagni/pen/vYNbrYN
