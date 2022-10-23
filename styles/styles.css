@@ -1217,8 +1217,9 @@ header {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   margin-top: 20px;
 }
@@ -1281,6 +1282,15 @@ header {
   }
 }
 @media (max-width: 1000px) {
+  .logo {
+    background-color: #eee;
+  }
+  .logo:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  .logo:focus {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
   nav {
     background-color: #daa520;
     opacity: 0.95;
@@ -1446,6 +1456,9 @@ header {
     margin: 10px;
     margin-bottom: 0;
   }
+  .projectRight > h3 {
+    text-align: center;
+  }
   h3, .linksContainer, .mainTextBlack {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1509,7 +1522,7 @@ header {
   h3 {
     font-size: 3.5rem;
   }
-  footer i {
+  .socialBox i {
     font-size: 5rem;
     margin: 0px;
   }
@@ -1562,8 +1575,17 @@ header {
     font-size: 2.5rem;
   }
   .socialBox {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .socialBox i {
+    font-size: 4rem;
+    padding: 0;
+    margin: 0;
+    height: 100px;
+    width: 100px;
   }
   .mainText, .mainTextBlack, .footerText {
     font-size: 1.6rem;

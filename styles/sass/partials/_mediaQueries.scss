@@ -43,15 +43,16 @@
 
 @media (max-width: 1000px) {
 
-  // .loaderText {
-  //   color: $white;
-  //   font-size: 4rem;
-  // }
-  
-  // .loaderText2 {
-  //   color: $yellow;
-  //   font-size: 2.5rem;
-  // }
+  .logo {
+    background-color: $white;
+
+    &:hover {
+      background-color: $black;
+    }
+    &:focus {
+      background-color: $black;
+    }
+  }
 
   nav {
     background-color: $yellow;
@@ -225,6 +226,10 @@
     }
   }
 
+  .projectRight > h3 {
+      text-align: center;
+  }
+
   h3, .linksContainer, .mainTextBlack {
     display: flex;
     justify-content: center;
@@ -288,6 +293,7 @@
     margin: 10px;
     height: 80px;
   }
+  
   .faText {
     font-size: 1.6rem;
   }
@@ -296,9 +302,10 @@
     font-size: 3.5rem;
   }
 
-  footer i {
+  .socialBox i {
     font-size: 5rem;
     margin: 0px; 
+
   }
 
   .resumeContainer {
@@ -362,9 +369,19 @@
     font-size: 2.5rem;
   }
 
+
   .socialBox {
-    flex-wrap: wrap;
+    flex-direction: column;
+    
+    i {
+      font-size: 4rem;
+      padding: 0;
+      margin: 0;
+      height: 100px;
+      width: 100px;
+    }
   }
+
   .mainText, .mainTextBlack, .footerText {
     font-size: 1.6rem;
   }
