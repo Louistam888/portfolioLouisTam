@@ -499,6 +499,7 @@ h2, .h2Line {
 
 .spanH2White {
   color: rgba(0, 0, 0, 0.85);
+  text-shadow: none;
 }
 
 .mainText {
