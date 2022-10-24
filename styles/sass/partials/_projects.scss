@@ -93,6 +93,11 @@
       transform: scale(1.1);
       background-color: grey;
     }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .codeLink:active {

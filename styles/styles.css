@@ -1218,6 +1218,10 @@ header {
           transform: scale(1.1);
   background-color: grey;
 }
+.linksContainer .codeLink img {
+  width: 100%;
+  height: auto;
+}
 .linksContainer .codeLink:active {
   -webkit-animation: push 0.5s ease-in-out;
           animation: push 0.5s ease-in-out;
