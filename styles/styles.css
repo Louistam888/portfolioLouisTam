@@ -273,11 +273,13 @@ section, footer {
   font-family: "Poppins-SemiBold";
   src: url("/fonts/Poppins/Poppins-SemiBold.ttf");
   font-weight: 700;
+  font-display: swap;
 }
 @font-face {
   font-family: "OpenSans-Light";
   src: url("/fonts/Open_Sans/static/OpenSans/OpenSans-Light.ttf");
   font-weight: light;
+  font-display: swap;
 }
 h1, h2 {
   text-transform: uppercase;
