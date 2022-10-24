@@ -5,9 +5,9 @@ window.addEventListener("load", () => {
 
     loader.classList.add("loader--hidden");
 
-    loader.addEventListener("transitionend"), () => {
-      document.body.removeChild(loader);
+    loader.addEventListener("transitionend", () => {
+      loader.classList.remove(".loader");
     }
-  }
+  )}
   setTimeout(delay, 1500);
 })
