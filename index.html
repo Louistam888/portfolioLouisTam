@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="Louis Tam frontend developer" content="Toronto based frontend developer">
+  <meta name="description" content="Toronto based frontend developer">
   <title>Louis Tam - web developer portfolio</title>
+  <link rel="shortcut icon" href="#" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 </head>
 <body id="top"> 
@@ -18,15 +19,13 @@
     </div>
   </div>
 
-
   <header>
     <nav>
-      <div class="wrapper"> <!-- nav wrapper start-->
+      <div class="wrapper"> 
         <div class="navContainer">
         <a href="#top" class="logo">LT</a>
   <!-- NAV MENU -->
           <ul class="menu">
-            
             <li><a href="#about" class="navLink">about</a></li>
             <li><a href="#projects" class="navLink">projects</a></li>
             <li><a href="#contact" class="navLink">contact</a></li>
@@ -42,27 +41,22 @@
     </nav>
 
     <div class="wrapper">
-      
       <div class="headerContainer">
-            <h1>Hi, I'm Louis Tam </h1>
-            <p class="h1B">I'm a </p>
-  
-            <div class="rotatingContainer">
-
-              <p class="h1A">I'm a </p>
-                <div class="words"> 
-                  <span class="spanH1B">multimedia creator</span>
-                  <span class="spanH1B">public servant</span>
-                  <span class="spanH1B">skilled marketer</span>
-                  <span class="spanH1B">business owner</span>
-                  <span class="spanH1B">frontend developer</span>
-                </div>
-              </div>
-          
-          <p class="chat">let's chat!</p>
+        <h1>Hi, I'm Louis Tam </h1>
+        <p class="h1B">I'm a </p>
+        <div class="rotatingContainer">
+          <p class="h1A">I'm a </p>
+          <div class="words"> 
+            <span class="spanH1B">multimedia creator</span>
+            <span class="spanH1B">public servant</span>
+            <span class="spanH1B">skilled marketer</span>
+            <span class="spanH1B">business owner</span>
+            <span class="spanH1B">frontend developer</span>
+          </div><!--words div end-->
+        </div><!--rotatingContainer div end-->
+        <p class="chat">let's chat!</p>
       </div><!--headerContainer div end-->
     </div><!--wrapper div end-->
-
 
   <!--SCROLL DOWN ARROW-->
   <a href="#about" aria-hidden="true">
@@ -76,6 +70,7 @@
 
   </header>
   <main>
+  <!--ABOUT SECTION -->
     <section class="about" id="about">
       <div class="wrapper">
         <div class="aboutMe">
@@ -83,7 +78,7 @@
             <h2>a little bit  
               <span class="spanH2">about me</span>
             </h2>
-          </div>
+          </div><!--aboutLeft div end-->
           <div class="aboutRight">
             <p class="mainText">Hello and pleasure to meet you. 
             
@@ -140,15 +135,17 @@
               <i class="fa-brands fa-accessible-icon fa-8x">
                 <p class="faText">Accessibility</p>
               </i>
-            </div>
+            </div><!--stack div end-->
           </div><!--aboutRight div end-->
         </div><!--aboutMe div end-->
+
         <div class="resumeContainer">
           <a href="./assets/LOUIS TAM.pdf" class="resume" target="_blank">Download my resume</a>
-        </div>
+        </div><!--resumeContainer div end-->
       </div><!--wrapper div end-->
     </section>
-
+  
+  <!--PROJECTS SECTION-->
     <section class="projects" id="projects">
       <div class="wrapper">
         <h2 class="h2White">Featured <span class="spanH2White">projects</span>
@@ -233,10 +230,9 @@
         </div><!--projectContainer div end-->
       </div><!--wrapper div end--> 
     </section>
-    
-    <div id="revealPoint" aria-hidden="true"></div><!--fade in reveal point-->
-    
+    <div id="revealPoint" aria-hidden="true"></div><!--fade in reveal point (invisible, desktop only)-->
   </main>
+
   <!--JAVASCRIPT-->
   <script src="./javascript/preloader.js"></script>
   <script src="https://kit.fontawesome.com/2d0137e58f.js" crossorigin="anonymous"></script>
@@ -259,12 +255,9 @@
           <a href="https://www.linkedin.com/in/louistam/" target="_blank"  aria-label="linkedIn"><i class="fab fa-linkedin" aria-hidden="true"><p class="faText">LinkedIn</p></i></a>
           <a href="https://github.com/Louistam888" target="_blank"  aria-label="github"><i class="fab fa-github" aria-hidden="true"><p class="faText">GitHub</p></i></a>
           <a href="https://calendly.com/louistam888" target="_blank"  aria-label="calendly"><i class="fas fa-calendar-check" aria-hidden="true"><p class="faText">Calendly</p></i></a>
-        </div>
-      </div>
-
+        </div><!--socialBox div end-->
+      </div><!--socialMediaContainer div end-->
     </div><!--footerContainer div end--> 
   </div><!--wrapper div end-->
-
-  
 </footer>
 </html>
