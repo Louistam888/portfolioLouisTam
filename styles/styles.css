@@ -1492,7 +1492,7 @@ header {
     margin: 10px;
     margin-bottom: 0;
   }
-  .projectRight > h3 {
+  .projectRight > h3, .projectLeft > h3 {
     text-align: center;
   }
   h3, .linksContainer, .mainTextBlack {
