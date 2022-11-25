@@ -1140,8 +1140,17 @@ header {
   -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
           transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
 }
-.projectLeft img, .projectRight img {
+
+.imgLink {
+  width: 100%;
+  height: 100%;
+}
+.imgLink img {
   border: 1px solid rgba(0, 0, 0, 0.85);
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .projectLeft.active, .projectRight.active {
@@ -1489,8 +1498,7 @@ header {
     opacity: 1;
   }
   .projectLeft .codeLink, .projectRight .codeLink {
-    margin: 10px;
-    margin-bottom: 0;
+    margin: 5px 0;
   }
   .projectRight > h3, .projectLeft > h3 {
     text-align: center;
@@ -1512,6 +1520,7 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-top: 10px;
   }
   .codeLink {
     width: 100%;
