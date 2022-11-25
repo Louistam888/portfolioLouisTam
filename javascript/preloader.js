@@ -6,10 +6,7 @@ window.addEventListener("load", () => {
     loader.classList.add("loader--hidden");
     document.body.style.overflow = "visible";
     
-    loader.addEventListener("transitionend", () => {
-      loader.classList.remove(".loader"); 
     }
-  )}
   setTimeout(delay, 1500);
 })
  document.body.style.overflow = "auto";

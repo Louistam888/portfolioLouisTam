@@ -634,10 +634,9 @@ i:focus {
   transition: opacity 0.9s, visibility 0.9s;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  flex-direction: column-reverse;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .loader::after {
@@ -1645,6 +1644,9 @@ header {
   }
   .mainText, .mainTextBlack, .footerText {
     font-size: 1.8rem;
+  }
+  .mainText {
+    text-align: center;
   }
   .resumeContainer {
     margin-top: 30px;
