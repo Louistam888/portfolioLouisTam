@@ -1193,7 +1193,6 @@ header {
   margin-left: 0;
   margin-right: 10px;
   margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .linksContainer {
@@ -1201,6 +1200,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  margin-top: auto;
 }
 .linksContainer .codeLink {
   text-decoration: none;
