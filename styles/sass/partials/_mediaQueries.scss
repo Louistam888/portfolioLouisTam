@@ -166,11 +166,11 @@
       border: none;
       justify-content: center; 
     }
+  }
 
-    .stack {
-      display: flex;
-      justify-content: center;
-    }
+  .stack {
+    display: flex;
+    justify-content: center;
   }
  
   h2 {
@@ -316,13 +316,15 @@
   .stack i {
     font-size: 5rem;
     margin: 15px;
-    height: 80px;
+    height: 80px; 
+    width: 80px;
+    
+    .faText {
+      font-size: 1.6rem;
+      margin-top: auto;
+    }
   }
   
-  .faText {
-    font-size: 1.6rem;
-  }
-
   h3 {
     font-size: 3.5rem;
   }
@@ -441,5 +443,14 @@
   .mainText, .mainTextBlack, .footerText {
     font-size: 1.6rem;
   }  
+
+  .stack {
+    justify-content: flex-start;
+    i {
+      margin-left: 0;
+      margin-right:0;
+      width: calc(100%/2)
+    }
+  }
 }
 

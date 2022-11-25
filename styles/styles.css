@@ -1038,6 +1038,9 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .resumeContainer {
@@ -1454,7 +1457,7 @@ header {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .aboutMe .stack {
+  .stack {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1596,9 +1599,11 @@ header {
     font-size: 5rem;
     margin: 15px;
     height: 80px;
+    width: 80px;
   }
-  .faText {
+  .stack i .faText {
     font-size: 1.6rem;
+    margin-top: auto;
   }
   h3 {
     font-size: 3.5rem;
@@ -1696,5 +1701,15 @@ header {
   }
   .mainText, .mainTextBlack, .footerText {
     font-size: 1.6rem;
+  }
+  .stack {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .stack i {
+    margin-left: 0;
+    margin-right: 0;
+    width: 50%;
   }
 }
