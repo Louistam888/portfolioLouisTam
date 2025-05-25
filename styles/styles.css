@@ -281,7 +281,8 @@ section, footer {
   font-weight: light;
   font-display: swap;
 }
-h1, h2 {
+h1,
+h2 {
   text-transform: uppercase;
   color: #eee;
 }
@@ -308,7 +309,8 @@ h1 {
   text-align: center;
 }
 
-.h1A, .spanH1B {
+.h1A,
+.spanH1B {
   font-family: "Poppins-Semibold";
   font-size: 7rem;
   line-height: 2.5rem;
@@ -336,80 +338,48 @@ h1 {
   height: 100%;
   padding-left: 20px;
   color: #daa520;
-  -webkit-animation: spin 8s 3.8s forwards;
-          animation: spin 8s 3.8s forwards;
+  -webkit-animation: spin 6s 3.8s forwards;
+          animation: spin 6s 3.8s forwards;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 @-webkit-keyframes spin {
-  10% {
-    -webkit-transform: translateY(-112%);
-            transform: translateY(-112%);
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
-  25% {
+  33.33% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
   }
-  35% {
-    -webkit-transform: translateY(-212%);
-            transform: translateY(-212%);
-  }
-  50% {
+  66.66% {
     -webkit-transform: translateY(-200%);
             transform: translateY(-200%);
   }
-  60% {
-    -webkit-transform: translateY(-312%);
-            transform: translateY(-312%);
-  }
-  75% {
-    -webkit-transform: translateY(-300%);
-            transform: translateY(-300%);
-  }
-  85% {
-    -webkit-transform: translateY(-412%);
-            transform: translateY(-412%);
-  }
   100% {
-    -webkit-transform: translateY(-400%);
-            transform: translateY(-400%);
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
   }
 }
 
 @keyframes spin {
-  10% {
-    -webkit-transform: translateY(-112%);
-            transform: translateY(-112%);
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
-  25% {
+  33.33% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
   }
-  35% {
-    -webkit-transform: translateY(-212%);
-            transform: translateY(-212%);
-  }
-  50% {
+  66.66% {
     -webkit-transform: translateY(-200%);
             transform: translateY(-200%);
   }
-  60% {
-    -webkit-transform: translateY(-312%);
-            transform: translateY(-312%);
-  }
-  75% {
-    -webkit-transform: translateY(-300%);
-            transform: translateY(-300%);
-  }
-  85% {
-    -webkit-transform: translateY(-412%);
-            transform: translateY(-412%);
-  }
   100% {
-    -webkit-transform: translateY(-400%);
-            transform: translateY(-400%);
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
   }
 }
 .chat {
@@ -418,8 +388,8 @@ h1 {
   text-transform: capitalize;
   font-family: "Poppins-Semibold";
   opacity: 0;
-  -webkit-animation: chatFade 3s 12s forwards;
-          animation: chatFade 3s 12s forwards;
+  -webkit-animation: chatFade 3s 8s forwards;
+          animation: chatFade 3s 8s forwards;
 }
 
 @-webkit-keyframes chatFade {
@@ -445,7 +415,8 @@ h2 {
   text-transform: capitalize;
 }
 
-h2, .h2Line {
+h2,
+.h2Line {
   font-family: "Poppins-Semibold";
   display: inline-block;
   text-align: right;
@@ -478,7 +449,8 @@ h2, .h2Line {
   text-transform: uppercase;
 }
 
-.h2White, .spanH2White {
+.h2White,
+.spanH2White {
   text-transform: uppercase;
   font-size: 5rem;
   white-space: pre;
@@ -529,7 +501,8 @@ h3 {
   text-align: center;
 }
 
-.loaderText, .loaderText2 {
+.loaderText,
+.loaderText2 {
   font-family: "Poppins-Semibold";
   text-transform: uppercase;
 }
@@ -1011,7 +984,8 @@ header {
   width: 100%;
   margin: 50px 0;
 }
-.aboutMe .aboutLeft, .aboutMe .aboutRight {
+.aboutMe .aboutLeft,
+.aboutMe .aboutRight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1041,6 +1015,12 @@ header {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.aboutStack {
+  color: #eee;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 .resumeContainer {

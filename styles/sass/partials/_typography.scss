@@ -14,9 +14,10 @@
   font-display: swap;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-transform: uppercase;
-  color: #eee; 
+  color: #eee;
 }
 
 h1 {
@@ -26,13 +27,14 @@ h1 {
   font-family: $bodyText;
   padding: 10px 0;
   width: 100%;
-  position: relative; 
+  position: relative;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.h1A, .spanH1B {
+.h1A,
+.spanH1B {
   font-family: $mainAccent;
   font-size: 7rem;
   line-height: 2.5rem;
@@ -52,36 +54,24 @@ h1 {
 .spanH1B {
   display: flex;
   height: 100%;
-  padding-left: 20px; 
+  padding-left: 20px;
   color: $yellow;
-  animation: spin 8s 3.8s forwards;
+  animation: spin 6s 3.8s forwards;
   align-items: center;
 }
 
 @keyframes spin {
-  10% {
-    transform: translateY(-112%);
+  0% {
+    transform: translateY(0%);
   }
-  25% {
+  33.33% {
     transform: translateY(-100%);
   }
-  35% {
-    transform: translateY(-212%);
-  }
-  50% {
+  66.66% {
     transform: translateY(-200%);
   }
-  60% {
-    transform: translateY(-312%);
-  }
-  75% {
-    transform: translateY(-300%);
-  }
-  85% {
-    transform: translateY(-412%);
-  }
   100% {
-    transform: translateY(-400%);
+    transform: translateY(-200%);
   }
 }
 
@@ -91,29 +81,34 @@ h1 {
   text-transform: capitalize;
   font-family: $mainAccent;
   opacity: 0;
-  animation: chatFade 3s 12s forwards;
+  animation: chatFade 3s 8s forwards;
 }
 
 @keyframes chatFade {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 h2 {
   display: inline-block;
-  font-size: 4.5rem; 
+  font-size: 4.5rem;
   text-transform: capitalize;
 }
 
-h2, .h2Line {
+h2,
+.h2Line {
   font-family: $mainAccent;
-  display: inline-block; 
+  display: inline-block;
   text-align: right;
   color: $white;
 }
 
 .h2Line {
-  display: flex; 
+  display: flex;
   font-size: 5.2rem;
   white-space: pre;
   text-transform: uppercase;
@@ -130,7 +125,8 @@ h2, .h2Line {
   text-transform: uppercase;
 }
 
-.h2White, .spanH2White {
+.h2White,
+.spanH2White {
   text-transform: uppercase;
   font-size: 5rem;
   white-space: pre;
@@ -145,7 +141,7 @@ h2, .h2Line {
 }
 
 .spanH2White {
-  color: $black; 
+  color: $black;
   text-shadow: none;
 }
 
@@ -177,7 +173,8 @@ h3 {
   text-align: center;
 }
 
-.loaderText, .loaderText2{
+.loaderText,
+.loaderText2 {
   font-family: $mainAccent;
   text-transform: uppercase;
 }
@@ -191,4 +188,3 @@ h3 {
   color: $yellow;
   font-size: 3rem;
 }
-
